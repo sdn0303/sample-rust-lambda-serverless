@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "docker run --rm -v $PWD:/code -v $HOME/.cargo/registry:/root/.cargo/registry -v $HOME/.cargo/git:/root/.cargo/git softprops/lambda-rust:latest",
+    "deploy": "sls deploy --stage dev --verbose"
+  },
+  "devDependencies": {
+    "serverless": "2.8.0",
+    "serverless-rust": "0.3.8"
+  }
+}

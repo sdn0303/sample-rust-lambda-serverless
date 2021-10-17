@@ -1,0 +1,20 @@
+service: sample-rust-lambda-serverless
+provider:
+  name: aws
+  runtime: rust
+  memorySize: 128
+  region: us-east-2
+package:
+  individually: true
+plugins:
+  - serverless-rust
+
+custom:
+  # this section customizes of the default
+  # serverless-rust plugin settings
+  rust:
+    dockerTag: 'latest'
+
+functions:
+  sample-function:
+    handler: sample-rust-lambda-serverless

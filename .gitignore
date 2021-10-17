@@ -1,0 +1,7 @@
+# Files
+.DS_Store
+
+# Directories
+/target
+/node_modules
+.idea
